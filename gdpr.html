@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockWise: GDPR Compliance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="icon" type="image" href="box-seam.svg">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1d4ed8;
+            --accent-color: #f59e0b;
+            --dark-color: #0f172a;
+            --success-color: #10b981;
+            --warning-color: #facc15;
+            --info-color: #3b82f6; /* Added info color for GDPR theme */
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--dark-color) 0%, var(--info-color) 100%); /* GDPR themed gradient */
+            color: white;
+            padding: 8rem 0 6rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section {
+            padding: 6rem 0;
+            background-color: #f8fafc;
+        }
+
+        .gdpr-card { /* Renamed from security-card */
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 20px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            height: 100%;
+        }
+         .gdpr-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .gdpr-icon { /* Renamed from security-icon */
+            font-size: 3rem;
+            color: var(--info-color); /* Use info color */
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .footer {
+            background: var(--dark-color);
+            color: rgba(255,255,255,0.8);
+            padding: 6rem 0 2rem;
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gdpr-image { /* Renamed from security-image */
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+         /* Basic list styling if needed, but prefer inline icons */
+         .list-gdpr li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5em;
+            position: relative;
+         }
+         .list-gdpr li::before {
+            content: '\\F633'; /* check-lg icon */
+            font-family: 'bootstrap-icons';
+            position: absolute;
+            left: 0;
+            color: var(--info-color);
+            font-weight: normal;
+         }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light nav-glass fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.php">
+            <i class="bi bi-box-seam fs-4" style="color: var(--primary-color);"></i>
+            <span class="ms-2 fw-bold">StockWise</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li> <!-- Corrected link -->
+                <li class="nav-item"><a class="nav-link" href="index.php#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.php#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.php#contact">Contact</a></li>
+            </ul>
+            <div class="ms-lg-3">
+                <a href="login.php" class="btn btn-outline-primary me-2">Login</a>
+                <a href="register.php" class="btn btn-primary px-4">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section" id="gdpr-hero">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-4 animate-on-scroll">
+            Our Commitment to <span style="color: var(--accent-color)">GDPR</span> Compliance
+        </h1>
+        <p class="lead mb-4 animate-on-scroll">
+            Understanding and respecting your data privacy rights under the General Data Protection Regulation.
+        </p>
+         <i class="bi bi-shield-shaded display-1 text-white animate-on-scroll" style="opacity: 0.5;"></i>
+    </div>
+</section>
+
+<!-- GDPR Content Section -->
+<section class="content-section" id="gdpr-details">
+    <div class="container">
+        <div class="text-center mb-5">
+             <h2 class="fw-bold animate-on-scroll">Your Data Privacy Matters</h2>
+             <p class="text-muted lead animate-on-scroll">StockWise is dedicated to protecting your personal data in accordance with GDPR.</p>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <!-- GDPR Principles Cards -->
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="gdpr-card text-center">
+                    <i class="bi bi-check2-circle gdpr-icon"></i>
+                    <h5 class="fw-bold mb-3">Lawfulness, Fairness, Transparency</h5>
+                    <p class="text-muted small">We process your data lawfully, fairly, and transparently. You will always be informed about how your data is used.</p>
+                </div>
+            </div>
+             <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="gdpr-card text-center">
+                    <i class="bi bi-pin-map gdpr-icon"></i>
+                    <h5 class="fw-bold mb-3">Purpose Limitation</h5>
+                    <p class="text-muted small">Data is collected for specified, explicit, and legitimate purposes and not further processed in a manner incompatible with those purposes.</p>
+                </div>
+            </div>
+             <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="gdpr-card text-center">
+                    <i class="bi bi-box gdpr-icon"></i>
+                    <h5 class="fw-bold mb-3">Data Minimisation</h5>
+                    <p class="text-muted small">We only collect personal data that is adequate, relevant, and limited to what is necessary for the purposes for which it is processed.</p>
+                </div>
+            </div>
+             <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="gdpr-card text-center">
+                    <i class="bi bi-pencil-square gdpr-icon"></i>
+                    <h5 class="fw-bold mb-3">Accuracy</h5>
+                    <p class="text-muted small">We take reasonable steps to ensure that personal data is accurate and, where necessary, kept up to date.</p>
+                </div>
+            </div>
+             <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="gdpr-card text-center">
+                    <i class="bi bi-hourglass-split gdpr-icon"></i>
+                    <h5 class="fw-bold mb-3">Storage Limitation</h5>
+                    <p class="text-muted small">Personal data is kept in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the data are processed.</p>
+                </div>
+            </div>
+             <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="gdpr-card text-center">
+                    <i class="bi bi-shield-lock gdpr-icon"></i>
+                    <h5 class="fw-bold mb-3">Integrity and Confidentiality</h5>
+                    <p class="text-muted small">We process personal data in a manner that ensures appropriate security, including protection against unauthorised or unlawful processing.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- User Rights Section - Styled like Image 1 Box -->
+        <div class="animate-on-scroll">
+             <div class="text-center mb-5">
+                 <i class="bi bi-shield-check display-2" style="color: var(--info-color);"></i>
+                 <h2 class="fw-bold mt-3 mb-3">Your Rights Under GDPR</h2>
+                 <p class="text-muted lead mx-auto" style="max-width: 700px;">
+                     As a user whose data may be processed by StockWise, you have specific rights under GDPR. We are committed to upholding these rights.
+                 </p>
+             </div>
+
+             <div class="row g-4">
+                 <!-- Individual Rights Cards - Styled like Image 1 Box -->
+                 <div class="col-md-6 col-lg-4">
+                     <div class="d-flex align-items-start p-3 border rounded h-100" style="background-color: #eef2ff;">
+                         <i class="bi bi-info-circle fs-4 me-3" style="color: var(--info-color);"></i>
+                         <div>
+                             <h6 class="fw-semibold mb-1">Right to be Informed</h6>
+                             <p class="small text-muted mb-0">About data collection and use.</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-6 col-lg-4">
+                     <div class="d-flex align-items-start p-3 border rounded h-100" style="background-color: #eef2ff;">
+                         <i class="bi bi-person-vcard fs-4 me-3" style="color: var(--info-color);"></i>
+                         <div>
+                             <h6 class="fw-semibold mb-1">Right of Access</h6>
+                             <p class="small text-muted mb-0">To your personal data.</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-6 col-lg-4">
+                     <div class="d-flex align-items-start p-3 border rounded h-100" style="background-color: #eef2ff;">
+                         <i class="bi bi-pencil-square fs-4 me-3" style="color: var(--info-color);"></i>
+                         <div>
+                             <h6 class="fw-semibold mb-1">Right to Rectification</h6>
+                             <p class="small text-muted mb-0">Of inaccurate data.</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-6 col-lg-4">
+                     <div class="d-flex align-items-start p-3 border rounded h-100" style="background-color: #eef2ff;">
+                         <i class="bi bi-trash3 fs-4 me-3" style="color: var(--info-color);"></i>
+                         <div>
+                             <h6 class="fw-semibold mb-1">Right to Erasure</h6>
+                             <p class="small text-muted mb-0">('Right to be forgotten').</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-6 col-lg-4">
+                     <div class="d-flex align-items-start p-3 border rounded h-100" style="background-color: #eef2ff;">
+                         <i class="bi bi-slash-circle fs-4 me-3" style="color: var(--info-color);"></i>
+                         <div>
+                             <h6 class="fw-semibold mb-1">Right to Restrict Processing</h6>
+                             <p class="small text-muted mb-0">In certain circumstances.</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-6 col-lg-4">
+                     <div class="d-flex align-items-start p-3 border rounded h-100" style="background-color: #eef2ff;">
+                         <i class="bi bi-box-arrow-right fs-4 me-3" style="color: var(--info-color);"></i>
+                         <div>
+                             <h6 class="fw-semibold mb-1">Right to Data Portability</h6>
+                             <p class="small text-muted mb-0">To obtain and reuse your data.</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-6 col-lg-4">
+                     <div class="d-flex align-items-start p-3 border rounded h-100" style="background-color: #eef2ff;">
+                         <i class="bi bi-sign-stop fs-4 me-3" style="color: var(--info-color);"></i>
+                         <div>
+                             <h6 class="fw-semibold mb-1">Right to Object</h6>
+                             <p class="small text-muted mb-0">To processing in certain cases.</p>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-6 col-lg-4">
+                     <div class="d-flex align-items-start p-3 border rounded h-100" style="background-color: #eef2ff;">
+                         <i class="bi bi-person-gear fs-4 me-3" style="color: var(--info-color);"></i>
+                         <div>
+                             <h6 class="fw-semibold mb-1">Automated Decision Making</h6>
+                             <p class="small text-muted mb-0">Rights related to profiling.</p>
+                         </div>
+                     </div>
+                 </div>
+                 <!-- Contact Box - Styled like Image 1 Box -->
+                 <div class="col-md-6 col-lg-4">
+                     <div class="d-flex align-items-start p-3 border rounded h-100" style="background-color: #eef2ff;">
+                         <i class="bi bi-headset fs-4 me-3" style="color: var(--info-color);"></i>
+                         <div>
+                             <h6 class="fw-semibold mb-1">Exercise Your Data Rights</h6>
+                             <p class="small text-muted mb-0">Contact support via the <a href="#contact" class="text-decoration-none fw-bold">footer section</a> below.</p>
+                         </div>
+                     </div>
+                 </div>
+             </div> <!-- End of row g-4 for rights cards -->
+        </div>
+        <!-- End User Rights Section -->
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h5 class="text-white mb-4">StockWise</h5>
+                <p class="text-white-50">Enterprise-grade inventory control for modern businesses</p>
+                <div class="social-icons">
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <h6 class="text-white">Solutions</h6>
+                <ul class="list-unstyled">
+                <li class="mb-2"><a href="warehousing.html" class="text-white-50">Warehousing</a></li>
+                    <li class="mb-2"><a href="retail.html" class="text-white-50">Retail</a></li>
+                    <li class="mb-2"><a href="manufacturing.html" class="text-white-50">Manufacturing</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h6 class="text-white">Legal</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="compliance.html" class="text-white-50">Compliance</a></li>
+                    <li class="mb-2"><a href="security.html" class="text-white-50">Security</a></li>
+                    <li class="mb-2"><a href="gdpr.html" class="text-white-50">GDPR</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h6 class="text-white">Contact</h6>
+                <ul class="list-unstyled">
+                    <li class="text-white-50"><a href="mailto:stockwise.thapar@gmail.com" class="text-white-50">stockwise.thapar@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="my-5 opacity-25">
+        <div class="text-center text-white-50">
+            <small>&copy; 2025 StockWise. All rights reserved.</small>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Scroll animation trigger (assuming it works, despite icon issues)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+        observer.observe(el);
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

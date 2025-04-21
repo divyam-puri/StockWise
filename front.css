@@ -1,0 +1,161 @@
+/* Minimal custom CSS */
+body {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    height: 100vh; /* Ensures body takes full height */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers content vertically */
+}
+
+/* Ensure box-sizing includes padding and border */
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%; /* Ensures the container takes full width */
+    max-width: 450px; /* Keeps the max-width restricted */
+    padding: 30px 20px; /* Padding added for spacing */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: auto; /* Adjusts the container height dynamically */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    overflow-y: auto; /* Allow scrolling if needed */
+    max-height: 90vh; /* Max height for the container */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increased space between fields */
+    position: relative;
+}
+
+.form-group input, .form-group select {
+    width: 100%; /* Ensures inputs take full width */
+    padding: 12px; /* Increased padding for better visibility */
+    font-size: 16px; /* Larger font for clarity */
+    border: 1px solid #ced4da;
+    border-radius: 15px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 10px rgba(37, 117, 252, 0.3);
+    background-color: #f4f7ff;
+}
+
+.email-otp {
+    display: flex;
+    gap: 10px; /* Increased gap */
+    margin-bottom: 15px;
+}
+
+.email-otp input {
+    flex: 1;
+    font-size: 16px;
+    padding: 12px;
+}
+
+.email-otp button {
+    font-weight: bold;
+    padding: 12px 20px; /* Increased button padding */
+    border-radius: 15px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.email-otp button:hover {
+    background-color: #e68900;
+    box-shadow: 0 3px 10px rgba(255, 152, 0, 0.4);
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border-radius: 15px;
+    padding: 12px 0;
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.otp-field {
+    display: none; /* Hide the OTP field initially */
+    animation: fadeIn 0.5s ease;
+}
+
+/* Animation for fade in effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 16px; /* Larger font for labels */
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group .mandatory {
+    color: red;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+/* Animation for Background Gradient */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+        margin: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .form-group input, .form-group select {
+        font-size: 14px; /* Smaller font on mobile */
+    }
+
+    button[type="submit"] {
+        font-size: 14px;
+    }
+    
+    .email-otp {
+        flex-direction: column;
+    }
+    
+    .email-otp button {
+        width: 100%;
+    }
+}

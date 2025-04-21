@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockWise: Security Measures</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="icon" type="image" href="box-seam.svg">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1d4ed8;
+            --accent-color: #f59e0b; /* Keeping accent color consistent */
+            --dark-color: #0f172a;
+            --success-color: #10b981; /* Green for positive security aspects */
+            --warning-color: #facc15; /* Yellow for attention */
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--dark-color) 0%, var(--secondary-color) 100%); /* Slightly different gradient */
+            color: white;
+            padding: 8rem 0 6rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section {
+            padding: 6rem 0;
+            background-color: #f8fafc; /* Light background for content */
+        }
+
+        .security-card {
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 20px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            height: 100%; /* Ensure cards in a row have same height */
+        }
+         .security-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .security-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            /* Removed gradient styling to ensure icon renders */
+        }
+
+         .feature-icon {
+            font-size: 2rem;
+            color: var(--success-color);
+            margin-right: 0.75rem;
+            vertical-align: middle;
+        }
+
+        .footer {
+            background: var(--dark-color);
+            color: rgba(255,255,255,0.8);
+            padding: 6rem 0 2rem;
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .security-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        /* Removed .list-styled rules as icons are now inline */
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light nav-glass fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.php">
+            <i class="bi bi-box-seam fs-4" style="color: var(--primary-color);"></i>
+            <span class="ms-2 fw-bold">StockWise</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li> <!-- Corrected link -->
+                <li class="nav-item"><a class="nav-link" href="index.php#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.php#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.php#contact">Contact</a></li>
+            </ul>
+            <div class="ms-lg-3">
+                <a href="login.php" class="btn btn-outline-primary me-2">Login</a>
+                <a href="register.php" class="btn btn-primary px-4">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section" id="security-hero">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-4 animate-on-scroll">
+            Robust <span style="color: var(--accent-color)">Security</span> for Your Inventory Data
+        </h1>
+        <p class="lead mb-4 animate-on-scroll">
+            Protecting your assets with multi-layered security protocols and continuous monitoring.
+        </p>
+         <i class="bi bi-shield-lock-fill display-1 text-white animate-on-scroll" style="opacity: 0.5;"></i>
+    </div>
+</section>
+
+<!-- Security Content Section -->
+<section class="content-section" id="security-details">
+    <div class="container">
+        <div class="text-center mb-5">
+             <h2 class="fw-bold animate-on-scroll">Our Security Commitment</h2>
+             <p class="text-muted lead animate-on-scroll">We implement comprehensive security measures at every level.</p>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="security-card text-center">
+                    <i class="bi bi-database-lock security-icon"></i>
+                    <h5 class="fw-bold mb-3">Data Encryption</h5>
+                    <p class="text-muted small">Your data is encrypted both in transit (using TLS 1.2+) and at rest (using AES-256), ensuring confidentiality and integrity.</p>
+                </div>
+            </div>
+             <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="security-card text-center">
+                    <i class="bi bi-person-vcard security-icon"></i>
+                    <h5 class="fw-bold mb-3">Access Control</h5>
+                    <p class="text-muted small">Granular role-based access controls (RBAC) ensure users only access the data and features relevant to their roles.</p>
+                </div>
+            </div>
+             <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="security-card text-center">
+                    <i class="bi bi-shield-lock security-icon"></i> <!-- Restored security-icon class -->
+                    <h5 class="fw-bold mb-3">Infrastructure Security</h5>
+                    <p class="text-muted small">Hosted on secure cloud infrastructure (e.g., AWS, Azure, GCP) with robust physical and network security measures.</p>
+                </div>
+            </div>
+             <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="security-card text-center">
+                    <i class="bi bi-shield-check security-icon"></i>
+                    <h5 class="fw-bold mb-3">Regular Audits</h5>
+                    <p class="text-muted small">Frequent internal and third-party security audits identify and address potential vulnerabilities proactively.</p>
+                </div>
+            </div>
+             <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="security-card text-center">
+                    <i class="bi bi-activity security-icon"></i>
+                    <h5 class="fw-bold mb-3">Threat Detection</h5>
+                    <p class="text-muted small">Continuous monitoring and intrusion detection systems (IDS/IPS) help identify and mitigate threats in real-time.</p>
+                </div>
+            </div>
+             <div class="col-lg-4 col-md-6 animate-on-scroll">
+                <div class="security-card text-center">
+                    <i class="bi bi-journal-check security-icon"></i>
+                    <h5 class="fw-bold mb-3">Audit Logs</h5>
+                    <p class="text-muted small">Comprehensive audit logs track user activity and system changes, providing accountability and traceability.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 animate-on-scroll">
+                 <h2 class="fw-bold mb-4">Protecting Your Business</h2>
+                 <p class="text-muted mb-4">StockWise security features are designed to safeguard your valuable inventory data, prevent unauthorized access, and ensure business continuity.</p>
+                 <ul class="list-unstyled"> <!-- Removed list-styled class and inline icons -->
+                    <li class="mb-3">Secure authentication methods (including optional MFA).</li>
+                    <li class="mb-3">Regular data backups and disaster recovery plans.</li>
+                    <li class="mb-3">Proactive vulnerability management and patching.</li>
+                    <li class="mb-3">Compliance with leading security standards.</li>
+                 </ul>
+                 <a href="#contact" class="btn btn-primary mt-3">Contact Us for Details</a>
+            </div>
+             <div class="col-lg-6 animate-on-scroll">
+                <!-- Using a placeholder image service -->
+                <img src="jkk.jpg" alt="Data Security Shield" class="security-image img-fluid">
+                 <p class="text-center text-muted small mt-2">Protecting your data with robust security measures.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h5 class="text-white mb-4">StockWise</h5>
+                <p class="text-white-50">Enterprise-grade inventory control for modern businesses</p>
+                <div class="social-icons">
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <h6 class="text-white">Solutions</h6>
+                <ul class="list-unstyled">
+                <li class="mb-2"><a href="warehousing.html" class="text-white-50">Warehousing</a></li>
+                    <li class="mb-2"><a href="retail.html" class="text-white-50">Retail</a></li>
+                    <li class="mb-2"><a href="manufacturing.html" class="text-white-50">Manufacturing</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h6 class="text-white">Legal</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="compliance.html" class="text-white-50">Compliance</a></li>
+                    <li class="mb-2"><a href="security.html" class="text-white-50">Security</a></li>
+                    <li class="mb-2"><a href="gdpr.html" class="text-white-50">GDPR</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h6 class="text-white">Contact</h6>
+                <ul class="list-unstyled">
+                    <li class="text-white-50"><a href="mailto:stockwise.thapar@gmail.com" class="text-white-50">stockwise.thapar@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="my-5 opacity-25">
+        <div class="text-center text-white-50">
+            <small>&copy; 2025 StockWise. All rights reserved.</small>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Scroll animation trigger
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
+        observer.observe(el);
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

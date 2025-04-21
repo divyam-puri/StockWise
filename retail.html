@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockWise: Retail Inventory Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="icon" type="image" href="box-seam.svg">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1d4ed8;
+            --accent-color: #f59e0b;
+            --dark-color: #0f172a;
+            --light-gray: #f8f9fa;
+        }
+
+        body {
+            padding-top: 56px; /* Adjust for fixed navbar */
+        }
+
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-header {
+            background-color: var(--primary-color); /* Use primary blue color */
+            color: white;
+            padding: 8rem 0;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+
+        .content-section {
+            padding: 5rem 0;
+        }
+
+        .footer {
+            background: var(--dark-color);
+            color: rgba(255,255,255,0.8);
+            padding: 4rem 0 2rem;
+        }
+
+        .img-feature {
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light nav-glass fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.php">
+            <i class="bi bi-box-seam fs-4" style="color: var(--primary-color);"></i>
+            <span class="ms-2 fw-bold">StockWise</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li> <!-- Corrected link -->
+                <li class="nav-item"><a class="nav-link" href="index.php#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.php#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.php#contact">Contact</a></li>
+            </ul>
+            <div class="ms-lg-3">
+                <a href="login.php" class="btn btn-outline-primary me-2">Login</a>
+                <a href="register.php" class="btn btn-primary px-4">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<header class="page-header">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Streamlined Retail Inventory</h1>
+        <p class="lead">Manage stock across all channels, optimize sales, and delight customers.</p>
+    </div>
+</header>
+
+<!-- Section 1: Overview -->
+<section class="content-section bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="fw-bold mb-3">Unified Retail Management</h2>
+                <p class="text-muted mb-4">StockWise provides a comprehensive solution for modern retailers. Track inventory in real-time, manage multi-channel sales, and gain insights to drive profitability.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Real-time stock visibility (online & in-store)</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Point of Sale (POS) integration</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Automated reordering & replenishment</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Sales analytics and forecasting</li>
+                </ul>
+                <a href="register.php" class="btn btn-primary mt-3">Get Started</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="unnamed.jpg" alt="Unified Retail Management System" class="img-fluid img-feature">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Key Features -->
+<section class="content-section">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5">Essential Retail Features</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="p-4">
+                    <i class="bi bi-shop feature-icon mb-3"></i>
+                    <h4 class="fw-semibold">Omnichannel Inventory</h4>
+                    <p class="text-muted">Sync stock levels across your website, marketplaces, and physical stores.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4">
+                    <i class="bi bi-graph-up-arrow feature-icon mb-3"></i>
+                    <h4 class="fw-semibold">Sales Optimization</h4>
+                    <p class="text-muted">Identify best-sellers, manage promotions, and reduce stockouts.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="p-4">
+                    <i class="bi bi-people feature-icon mb-3"></i>
+                    <h4 class="fw-semibold">Customer Management</h4>
+                    <p class="text-muted">Track purchase history and preferences for personalized experiences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Benefits -->
+<section class="content-section bg-light">
+    <div class="container">
+        <div class="row align-items-center flex-row-reverse">
+             <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="fw-bold mb-3">Elevate Your Retail Business</h2>
+                <p class="text-muted mb-4">With StockWise, improve efficiency, increase sales, and build customer loyalty. Make data-driven decisions to stay ahead in the competitive retail landscape.</p>
+                <div class="mt-4">
+                    <div class="d-flex align-items-start mb-3">
+                        <i class="bi bi-cart-check fs-4 text-success me-3"></i>
+                        <div>
+                            <h5 class="fw-semibold mb-1">Increase Sales Velocity</h5>
+                            <p class="text-muted mb-0">Ensure product availability and streamline checkout.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-3">
+                        <i class="bi bi-graph-down fs-4 text-danger me-3"></i>
+                        <div>
+                            <h5 class="fw-semibold mb-1">Reduce Holding Costs</h5>
+                            <p class="text-muted mb-0">Optimize stock levels and minimize overstock.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start">
+                        <i class="bi bi-emoji-smile fs-4 text-warning me-3"></i>
+                        <div>
+                            <h5 class="fw-semibold mb-1">Enhance Customer Satisfaction</h5>
+                            <p class="text-muted mb-0">Provide seamless shopping experiences across channels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="Screenshot 2025-04-05 152816.png" alt="Retail Management Dashboard" class="img-fluid img-feature">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h5 class="text-white mb-4">StockWise</h5>
+                <p class="text-white-50">Enterprise-grade inventory control for modern businesses</p>
+                <div class="social-icons">
+                    <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-github"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <h6 class="text-white">Solutions</h6>
+                <ul class="list-unstyled">
+                <li class="mb-2"><a href="warehousing.html" class="text-white-50">Warehousing</a></li>
+                    <li class="mb-2"><a href="retail.html" class="text-white-50">Retail</a></li>
+                    <li class="mb-2"><a href="manufacturing.html" class="text-white-50">Manufacturing</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h6 class="text-white">Legal</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="compliance.html" class="text-white-50">Compliance</a></li>
+                    <li class="mb-2"><a href="security.html" class="text-white-50">Security</a></li>
+                    <li class="mb-2"><a href="gdpr.html" class="text-white-50">GDPR</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <h6 class="text-white">Contact</h6>
+                <ul class="list-unstyled">
+                    <li class="text-white-50"><a href="mailto:stockwise.thapar@gmail.com" class="text-white-50">stockwise.thapar@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr class="my-4 opacity-25">
+        <div class="text-center text-white-50">
+            <small>&copy; 2025 StockWise. All rights reserved.</small>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
