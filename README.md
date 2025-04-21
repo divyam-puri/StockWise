@@ -43,7 +43,7 @@ This project was developed as a **group project**, where I was responsible for:
 
 ## 📸 Screenshots
 
-![Dashboard Screenshot](<[https://github.com/divyam-puri/StockWise/screenshot.png](https://github.com/divyam-puri/StockWise/blob/main/screenshot.png)>)  
+![Dashboard Screenshot](<https://github.com/divyam-puri/StockWise/blob/main/screenshot.png>)  
 _Add more screenshots or GIFs to showcase the features._
 
 ---
